@@ -22,7 +22,7 @@ public class MouseLook : MonoBehaviour {
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
 
-	public float minimumX = -360F;
+	public float minimumX = -34F;
 	public float maximumX = 360F;
 
 	public float minimumY = -60F;
@@ -46,7 +46,7 @@ public class MouseLook : MonoBehaviour {
 			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
 		}
 		else
-		{
+		{ // poop
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
@@ -57,7 +57,7 @@ public class MouseLook : MonoBehaviour {
 	void Start ()
 	{
 		// Make the rigid body not change rotation
-		if (rigidbody)
+
 			rigidbody.freezeRotation = true;
 	}
 }
